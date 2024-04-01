@@ -1,38 +1,189 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bottom-tabs {
+  bottom: 0;
+  height: 60px;
+  width: 700px;
+  position: fixed;
+  margin: 10px auto;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.current-weather-tab {
+  float: left;
+  min-width: 25%;
+  text-align: center;
+  background-color: #eb6e4b;
+  height: 60px;
+  margin-right: 10px;
+  color: black;
+  font-size: 20px;
+  border-radius: 50px;
+}
+
+.current-weather-tab:hover {
+  background-color: #ff9b3d;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.forcast-tab {
+  float: left;
+  min-width: 25%;
+  text-align: center;
+  background-color: #eb6e4b;
+  height: 60px;
+  margin-right: 10px;
+  color: black;
+  font-size: 20px;
+  border-radius: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.forcast-tab:hover {
+  background-color: #ff9b3d;
+  color: white;
+}
+
+.header {
+  margin: auto;
+  background-color: #eb6e4b;
+  width: 50%;
+  height: 60px;
+  text-align: center;
+  justify-content: center; 
+  display: flex;
+  border-radius: 10px;
+  color: black;
+  font-size: 20px;
+}
+
+.conponent-parent-div{
+    height: 500px;
+    width: 45%;
+    display: block;
+    margin: 0 auto;
+}
+
+.current-weather-card{
+  margin-top: 20px;
+  border-radius: 50px;
+  height: auto;
+  padding: 20px;  
+  background-image: url('https://img.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_1017-25501.jpg');
+  background-size: cover; 
+  background-position: center; 
+}
+
+.current-weather-card img{
+  width: 15%;
+  height: 25%;
+  justify-content: center;
+  align-items: center; 
+  margin-top: 3%;
+}
+
+.search-city{
+  display: flex;
+}
+
+.temp-div{
+  display: flex;
+}
+
+.temp-div p{    
+  font-size: 50px;
+}
+
+.search-city input{
+  width: 97%;
+  height: 36px;
+  border-radius: 50px;
+  margin-top: 34px; 
+  padding-left: 10px;
+}
+
+.search-city button{
+  height: 40px;
+  margin-top: 34px; 
+  margin-left: 10px;
+  border-radius: 50px;
+  width: 150px;
+  font-size: 18px;
+}
+
+.search-city button:hover{
+  background-color: #ff9b3d;
+}
+
+.details-title{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.details-data{
+  font-size: 20px;
+  font-weight: 600;
+  color: #eb6e4b;
+}
+
+.date{
+  color: #eb6e4b;
+  margin-bottom: -20px;
+}
+
+.loader {
+  border: 4px solid #f3f3f3; 
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 20% auto; 
+}
+
+@keyframes spin{
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.forcast-today-main-div{
+  margin-right: 30px;
+}
+
+.current-weather-forcast-card{
+  overflow-x: scroll; 
+  overflow-y: hidden; 
+  border: 1px solid #ccc; 
+  display: flex;
+  margin-top: 20px;
+  border-radius: 50px;
+  height: auto;
+  padding: 20px;
+  background-image: url('https://img.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_1017-25501.jpg');
+  background-size: cover; 
+  background-position: center; 
+  scroll-behavior:auto;
+  position: relative;
+}
+
+.forcast-today-main-div div{
+  text-align: center;
+  font-weight: 600;
+}
+
+.forcast-week-list{
+  margin-top: 20px;
+  border-radius: 50px;
+  height: auto;
+  padding: 20px;  
+  background-image: url('https://img.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_1017-25501.jpg');
+  background-size: cover; 
+  background-position: center; 
+}
+
+.forcast-week-today{
+  display: flex;
+}
+
+.forcast-week-today div{
+  margin-right: 50px;
 }
